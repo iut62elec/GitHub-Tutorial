@@ -43,3 +43,15 @@ git checkout man-branch
 # After you changed your program codes and made commits
 git push -u origin man-branch # push your changes to github
     # another way to push results is through github desktop software
+
+################################################################
+### Input from Yoon about the public key assess on EC2 Instance
+### Create public key to access github (https://help.github.com/articles/generating-ssh-keys/)
+### You’ll need this when you get github access denied due to 
+### missing public key
+##################################################
+
+ssh-keygen -t rsa -b 4096 -C 'myemail@email.com'
+ssh-agent -s
+ssh-add ~/.ssh/id_rsa # Add public key to github account (<>/github.com/settings/ssh)
+ssh –vT git@github.com # Check for connection
