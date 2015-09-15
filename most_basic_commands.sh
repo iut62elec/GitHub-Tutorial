@@ -1,4 +1,6 @@
 #!/usr/bin/env 
+# Author: Man Peng
+# Sep 2015
 
 # first set up git info
 git config --global user.name "John Doe"
@@ -14,5 +16,14 @@ git add dummy1.py *.py dummy_folder/*.txt
 git add --all #adding all files
 git commit -m 'my change to some codes'
 
+
 # clone a git on GitHub
 git clone https://github.com/ng-manpeng/markup.git
+cd markup #get in the folder for the repo you just downloaded
+# extract all branches if they exist
+for branch in `git branch -a | grep remotes | grep -v HEAD`; do
+    git branch --track ${branch##*/} $branch
+done
+git fetch --all ; git pull --all
+
+#
