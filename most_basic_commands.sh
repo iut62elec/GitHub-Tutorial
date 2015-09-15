@@ -26,4 +26,20 @@ for branch in `git branch -a | grep remotes | grep -v HEAD`; do
 done
 git fetch --all ; git pull --all
 
-#
+##################################################
+### Always "git fetch origin the_main_branch" to 
+### get the most updated codes if one wants to make
+### changes to the source codes
+##################################################
+
+# check out the remotes you currently have, usually the default
+# one is the "origin"
+git remote -v
+# create your own branch
+git branch man-branch
+git branch -a #check the list of branches you have
+# switch to my own branch
+git checkout man-branch
+# After you changed your program codes and made commits
+git push -u origin man-branch # push your changes to github
+    # another way to push results is through github desktop software
