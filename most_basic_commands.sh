@@ -70,6 +70,11 @@ If you are a collaborator who wants to make contribuiton to the
 ### You’ll need this when you get github access denied due to 
 ### missing public key
 ##################################################
+"""
+Check out this for more details on SSH keys  https://help.github.com/articles/generating-ssh-keys/
+
+SSH keys are a way to identify trusted computers, without involving passwords. This comes in handy when we work on remote server and need to push the changes made to the codes on server to GitHub account.
+"""
 
 ssh-keygen -t rsa -b 4096 -C 'myemail@email.com'
 ssh-agent -s
