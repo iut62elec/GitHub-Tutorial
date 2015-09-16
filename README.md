@@ -7,3 +7,4 @@ Check out the comments for what the commands are for. If you enjoy GUI and click
 - GitHub Glossary: see file  `GitHub Glossary.pdf`
 - Cheat Sheet: Short version, see file  `github-git-cheat-sheet.pdf`
 - Cheat Sheet: Long version, see file  `github-git-cheat-sheet_Long Version.pdf`
+- Check out [this link](https://help.github.com/articles/generating-ssh-keys/) for more details on creating public keys to access GitHub repo without typing password every time on trusted computers/remote servers.
