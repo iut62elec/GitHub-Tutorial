@@ -76,9 +76,6 @@ If you are a collaborator who wants to make contribuiton to the
 ### missing public key
 ################################################################
 """
-Check out the following link for more details on SSH keys
-    https://help.github.com/articles/generating-ssh-keys/
-
 SSH keys are a way to identify trusted computers, without involving passwords. It comes in handy
     when we work on remote server and need to push the changes made to the codes on server to GitHub
     account. Without SSH keys, you may have to type your account name and password every time you
