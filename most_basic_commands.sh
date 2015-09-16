@@ -51,6 +51,7 @@ git remote -v
 git branch man-branch
 git branch # check the list of local branches
 git branch -a # check the list of all branches, including remote ones
+git branch -d useless-branch # delete the local branch you do not want
 # switch to my own branch
 git checkout man-branch
 # merge the branch named "man-branch" into the current branch, say, "master"
