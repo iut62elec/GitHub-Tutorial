@@ -71,7 +71,6 @@ If you are a collaborator who wants to make contribuiton to the
 
 ################################################################
 ### Input from Yoon about the public key assess on EC2 Instance
-### Create public key to access github (https://help.github.com/articles/generating-ssh-keys/)
 ### You’ll need this when you get github access denied due to 
 ### missing public key
 ################################################################
