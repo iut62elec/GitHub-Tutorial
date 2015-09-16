@@ -1,6 +1,9 @@
 #!/usr/bin/env 
-# Author: Man Peng
-# Sep 2015
+
+"""
+Author: Man Peng
+Date: Sep 2015
+"""
 
 # first set up git info
 git config --global user.name "John Doe"
@@ -8,7 +11,9 @@ git config --global user.email johndoe@example.com
 # check git config info
 git config --list
 
-# create a git repo
+# create a git repo in the main directory of the program
+    # this is needed only if you have not started using
+    # git to do version control on the program
 git init
 
 # make change to codes and commit LOCALLY
@@ -26,29 +31,29 @@ git clean -fd  # Remove all untracked files and directories.
 
 # clone a git on GitHub
 git clone https://github.com/ng-manpeng/markup.git
-cd markup #get in the folder for the repo you just downloaded
+# get in the folder "markup" for the repo you just downloaded
+cd markup
 # extract all branches if they exist
 for branch in `git branch -a | grep remotes | grep -v HEAD`; do
     git branch --track ${branch##*/} $branch
 done
 git fetch --all ; git pull --all
 
-##################################################
+################################################################
 ### Always "git fetch origin the_main_branch" to 
 ### get the most updated codes if one wants to make
 ### changes to the source codes
-##################################################
+################################################################
 
-# check out the remotes you currently have, usually the default
-    # one is the "origin"
+# check out the remotes you currently have, usually the default one is the "origin"
 git remote -v
-# create your own branch
+# create my own branch, say, "man-branch"
 git branch man-branch
-git branch -a #check the list of branches you have
+git branch # check the list of local branches
+git branch -a # check the list of all branches, including remote ones
 # switch to my own branch
 git checkout man-branch
-# merge the branch named "man-branch" into the current branch "master"
-    # here, we assume your current branch is "master"
+# merge the branch named "man-branch" into the current branch, say, "master"
 git merge man-branch
 # after you changed your program codes and made commits
 git push -u origin man-branch # push your changes to github
@@ -69,11 +74,16 @@ If you are a collaborator who wants to make contribuiton to the
 ### Create public key to access github (https://help.github.com/articles/generating-ssh-keys/)
 ### You’ll need this when you get github access denied due to 
 ### missing public key
-##################################################
+################################################################
 """
-Check out this for more details on SSH keys  https://help.github.com/articles/generating-ssh-keys/
+Check out the following link for more details on SSH keys
+    https://help.github.com/articles/generating-ssh-keys/
 
-SSH keys are a way to identify trusted computers, without involving passwords. This comes in handy when we work on remote server and need to push the changes made to the codes on server to GitHub account.
+SSH keys are a way to identify trusted computers, without involving passwords. It comes in handy
+    when we work on remote server and need to push the changes made to the codes on server to GitHub
+    account. Without SSH keys, you may have to type your account name and password every time you
+    push something, and it gets quite annoying and even makes things impossible if we want to automate
+    things in command lines/codes.
 """
 
 ssh-keygen -t rsa -b 4096 -C 'myemail@email.com'
