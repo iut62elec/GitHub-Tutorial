@@ -66,8 +66,8 @@ If you are a collaborator who wants to make contribuiton to the
     main branch through GitHub, you may
     1) fork the original branch into your own branch in your GitHub account
     2) after you make changes to your forked branch, you may send a pull 
-        request for your branch (the base) to be merged into original
-        main branch (the HEAD)
+        request for your modified forked branch (the head fork/branch) to be 
+        merged into the branch in the original repo (the base fork, base branch)
 """
 
 ################################################################
