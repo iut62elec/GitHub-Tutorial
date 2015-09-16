@@ -80,6 +80,8 @@ SSH keys are a way to identify trusted computers, without involving passwords. I
     account. Without SSH keys, you may have to type your account name and password every time you
     push something, and it gets quite annoying and even makes things impossible if we want to automate
     things in command lines/codes.
+
+The following is specific to Linux OS.
 """
 
 ssh-keygen -t rsa -b 4096 -C 'myemail@email.com'
